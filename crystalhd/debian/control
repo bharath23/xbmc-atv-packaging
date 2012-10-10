@@ -1,0 +1,42 @@
+Source: crystalhd
+Priority: optional
+Maintainer: Bharath Ramesh <bramesh.dev@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~),
+               dkms
+Standards-Version: 3.9.2
+Section: libs
+Homepage: http://www.broadcom.com/support/crystal_hd/
+
+Package: libcrystalhd-dev
+Section: libdevel
+Architecture: amd64 i386
+Depends: libcrystalhd3 (= ${binary:Version}),
+         ${shlibs:Depends}, ${misc:Depends}
+Description: Crystal HD Video Decoder (development files)
+ Crystal HD Solution is a product offered by Broadcom. It is used to enable
+ flawless playback of 1080p high definition video across a wide range of
+ systems.
+ .
+ This package contains the files necessary for development.
+
+Package: libcrystalhd3
+Architecture: amd64 i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Crystal HD Video Decoder (shared library)
+ Crystal HD Solution is a product offered by Broadcom. It is used to enable
+ flawless playback of 1080p high definition video across a wide range of
+ systems.
+ .
+ This package contains the shared library.
+
+Package: crystalhd-dkms
+Section: kernel
+Architecture: amd64 i386
+Depends: ${shlibs:Depends}, ${misc:Depends}, dkms
+Suggests: linux-headers
+Description: Crystal HD Video Decoder (Linux kernel driver)
+ Crystal HD Solution is a product offered by Broadcom. It is used to enable
+ flawless playback of 1080p high definition video across a wide range of
+ systems.
+ .
+ This package contains the crystalhd Linux kernel driver.

@@ -1,0 +1,9 @@
+Copyright (c) 2012 Bharath Ramesh <bramesh.dev@gmail.com>.
+
+Packaging files for xbmc-atv ppa.
+
+Notes:
+Some of the packaging files are edited version of the original ubuntu packaging.
+These files are distributed under the same license as the original packaging.
+
+Some of the packaging files have been written by me and distributed under GPL-2.

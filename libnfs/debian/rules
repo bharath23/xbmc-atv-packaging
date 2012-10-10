@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+# Set CFLAGS to DEB_CFLAGS
+CFLAGS=$(DEB_CFLAGS) -D_FILE_OFFSET_BITS=64
+
+%:
+	dh $@
+
+override_dh_clean:
+	dh_clean examples/Makefile
+
+override_dh_install:
+	mkdir -p debian/tmp/usr/lib/pkgconfig/
+	cp -f debian/libnfs.pc debian/tmp/usr/lib/pkgconfig/
+	dh_install

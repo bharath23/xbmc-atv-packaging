@@ -1,0 +1,5 @@
+fuse-exfat (0.9.8-lucid~ppa1) lucid; urgency=low
+
+  * Initial lucid release.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Wed, 19 Sep 2012 03:40:05 +0000

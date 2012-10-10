@@ -1,0 +1,42 @@
+xbmc (2:11.0+git20120510.82388d5-ppa7) precise; urgency=low
+
+  * Set the build depends version correctly for libnfs-1.0-dev.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Tue, 18 Sep 2012 16:04:13 +0000
+
+xbmc (2:11.0+git20120510.82388d5-ppa6) precise; urgency=low
+
+  * Change build depends to libnfs-1.0-dev.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Tue, 18 Sep 2012 13:45:51 +0000
+
+xbmc (2:11.0+git20120510.82388d5-ppa5) precise; urgency=low
+
+  * XBMC eden requires libnfs-1.0.0~git20110902.0804e67.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Mon, 17 Sep 2012 20:35:05 +0000
+
+xbmc (2:11.0+git20120510.82388d5-ppa4) precise; urgency=low
+
+  * Enable libssh support.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Sun, 05 Aug 2012 13:41:03 +0000
+
+xbmc (2:11.0+git20120510.82388d5-ppa3) precise; urgency=low
+
+  * Remove arm dependencies.
+  * Enable vdpau/vaapi dependencies for amd64 builds only.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Wed, 11 Jul 2012 13:32:44 +0000
+
+xbmc (2:11.0+git20120510.82388d5-ppa2) precise; urgency=low
+
+  * Add libafpclient-dev as build depends.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Wed, 11 Jul 2012 04:42:54 +0000
+
+xbmc (11.0+git20120510.82388d5-ppa1) precise; urgency=low
+
+  * Initial release.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Tue, 10 Jul 2012 05:52:52 +0000

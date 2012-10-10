@@ -1,0 +1,5 @@
+rtmpdump (2.4+git7340f6db-ppa1) precise; urgency=low
+
+  * Initial release.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Sun, 08 Jul 2012 23:33:42 +0000

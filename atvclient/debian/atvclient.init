@@ -1,0 +1,48 @@
+#/bin/sh
+### BEGIN INIT INFO
+# Provides:	atvclient
+# Required-Start:	$local_fs $syslog
+# Required-Stop:	$local_fs $syslog
+# Default-Start:	2 3 4 5
+# Default-Stop:		0 1 6
+# Short-Description:	atvclient
+# Description:		AppleTV remote XBMC event client
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+NAME=atvclient
+SCRIPTNAME=/etc/init.d/$NAME
+DAEMON=/usr/sbin/$NAME
+pidfile=/var/run/$NAME.pid
+defaults=/etc/default/$NAME
+
+# exit if the daemon is missing.
+[ -x $DAEMON ] || exit 0
+
+. /lib/lsb/init-functions
+
+[ -f $defaults ] && . $defaults
+
+case "$1" in
+start)
+	log_begin_msg "Starting $NAME..."
+	start-stop-daemon -b -m --pidfile $pidfile --name $NAME --exec $DAEMON --start -- $OPTIONS
+	log_end_msg $?
+	;;
+stop)
+	log_begin_msg "Stopping $NAME..."
+	start-stop-daemon --stop --pidfile $pidfile --name $NAME
+	log_end_msg $?
+	;;
+force-reload|reload|restart)
+	$0 stop
+	sleep 5
+	$0 start
+	;;
+*)
+	echo "Usage: $SCRIPTNAME {start|stop|force-reload|reload|restart}"
+	exit 1
+	;;
+esac
+
+exit 0

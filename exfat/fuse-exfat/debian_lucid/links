@@ -1,0 +1,2 @@
+sbin/mount.exfat-fuse sbin/mount.exfat
+usr/share/man/man8/mount.exfat-fuse.8.gz usr/share/man/man8/mount.exfat.8.gz

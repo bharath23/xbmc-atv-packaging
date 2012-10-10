@@ -1,0 +1,4 @@
+dump/dumpexfat.8
+fsck/exfatfsck.8
+label/exfatlabel.8
+mkfs/mkexfatfs.8

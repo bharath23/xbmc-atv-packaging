@@ -1,0 +1,3 @@
+# atvclient options
+# enable multi-remote support
+OPTIONS="-m"

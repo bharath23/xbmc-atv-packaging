@@ -1,0 +1,4 @@
+sbin/exfatfsck sbin/fsck.exfat
+sbin/mkexfatfs sbin/mkfs.exfat
+usr/share/man/man8/exfatfsck.8.gz usr/share/man/man8/fsck.exfat.8.gz
+usr/share/man/man8/mkexfatfs.8.gz usr/share/man/man8/mkfs.exfat.8.gz

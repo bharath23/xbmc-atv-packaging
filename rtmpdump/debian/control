@@ -1,0 +1,40 @@
+Source: rtmpdump
+Maintainer: Bharath Ramesh <bramesh.dev@gmail.com>
+Section: web
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 8), libssl-dev
+
+Package: rtmpdump
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: small dumper for media content streamed over the RTMP protocol
+ A small dumper for media content streamed over the RTMP protocol (like BBC's
+ iPlayer high quality streams). Supplying an rtmp URL will result in a dumped
+ flv file, which can be played/transcoded using ffmpeg/mplayer, etc.
+
+Package: librtmp0
+Section: libs
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Architecture: any
+Multi-Arch: same
+Description: toolkit for RTMP streams (shared library)
+ A small dumper for media content streamed over the RTMP protocol (like BBC's
+ iPlayer high quality streams). Supplying an rtmp URL will result in a dumped
+ flv file, which can be played/transcoded using ffmpeg/mplayer, etc.
+ .
+ This package contains the shared libraries, header files needed by
+ programs that want to use librtmp.
+
+Package: librtmp-dev
+Section: libdevel
+Depends: libssl-dev, librtmp0 (= ${binary:Version}), ${misc:Depends}
+Architecture: any
+Description: toolkit for RTMP streams (development files)
+ A small dumper for media content streamed over the RTMP protocol (like BBC's
+ iPlayer high quality streams). Supplying an rtmp URL will result in a dumped
+ flv file, which can be played/transcoded using ffmpeg/mplayer, etc.
+ .
+ This package contains the development libraries, header files needed by
+ programs that want to compile with librtmp.

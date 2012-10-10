@@ -1,0 +1,17 @@
+fuse-exfat (0.9.8-2) precise; urgency=low
+
+  * Recommend exfat-utils
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Thu, 30 Aug 2012 14:39:20 +0000
+
+fuse-exfat (0.9.8-1) precise; urgency=low
+
+  * Add missed symlinks.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Thu, 30 Aug 2012 04:31:33 +0000
+
+fuse-exfat (0.9.8) precise; urgency=low
+
+  * Initial release.
+
+ -- Bharath Ramesh <bramesh.dev@gmail.com>  Thu, 30 Aug 2012 03:59:20 +0000

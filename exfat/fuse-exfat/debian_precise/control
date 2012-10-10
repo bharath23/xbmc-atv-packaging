@@ -1,0 +1,14 @@
+Source: fuse-exfat
+Maintainer: Bharath Ramesh <bramesh.dev@gmail.com>
+Section: otherosfs
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 8), scons, libfuse-dev
+
+Package: exfat-fuse
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, fuse
+Recommends: exfat-utils
+Description: Read and write exFAT driver for fuse
+ fuse-exfat is a read and write driver implementing exFAT as
+ a file system in userspace.

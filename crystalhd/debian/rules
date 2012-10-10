@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+UPSTREAM_VERSION = $(shell dpkg-parsechangelog | grep -G '^Version' | \
+                     cut -d ' ' -f 2 | sed 's/^[^:]:*//' | sed 's/-.*$$//')
+
+%:
+	dh --with dkms $@
+
+override_dh_auto_build:
+	make -C linux_lib/libcrystalhd
+
+override_dh_auto_install:
+	make install -C linux_lib/libcrystalhd DESTDIR=$(CURDIR)/debian/tmp
+	mkdir -p $(CURDIR)/debian/tmp/usr/src/crystalhd-$(UPSTREAM_VERSION)
+	cp -rf driver $(CURDIR)/debian/tmp/usr/src/crystalhd-$(UPSTREAM_VERSION)
+	cp -rf include $(CURDIR)/debian/tmp/usr/src/crystalhd-$(UPSTREAM_VERSION)
+	install -D -m 0644 driver/linux/20-crystalhd.rules $(CURDIR)/debian/tmp/lib/udev/rules.d/20-crystalhd.rules
+	rm -f $(CURDIR)/debian/tmp/usr/src/crystalhd-$(UPSTREAM_VERSION)/driver/linux/bcm_70012_dev.sh
+	rm -f $(CURDIR)/debian/tmp/usr/src/crystalhd-$(UPSTREAM_VERSION)/driver/linux/bcm_70012_run.sh
+
+override_dh_auto_clean:
+	dh_clean
+	make clean -C linux_lib/libcrystalhd
+
+override_dh_dkms:
+	dh_dkms -V $(UPSTREAM_VERSION)

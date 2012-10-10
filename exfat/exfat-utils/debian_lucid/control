@@ -1,0 +1,19 @@
+Source: exfat-utils
+Maintainer: Bharath Ramesh <bramesh.dev@gmail.com>
+Section: otherosfs
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper, scons
+
+Package: exfat-utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: exfat-fuse
+Description: Utilities to create, check, label and dump exFAT filesystem
+ Utilities to manage exFAT filesystem.
+ This package provides tools to create, check, label and dump the
+ filesystem. It contains the following:
+  - dumpexfat to dump properties of the filesystem
+  - exfatfsck / fsck.exfat to report errors found on exFAT filesystem
+  - exfatlabel to label a exFAT filesystem
+  - mkexfatfs / mkfs.exfat to create a exFAT filesystem

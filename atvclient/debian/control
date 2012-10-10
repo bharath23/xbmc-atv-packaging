@@ -1,0 +1,13 @@
+Source: atvclient
+Maintainer: Bharath Ramesh <bramesh.dev@gmail.com>
+Section: utils
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 8), libusb-dev, pkg-config (>= 0.9)
+
+Package: atvclient
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: AppleTV Remote XBMC Eventclient
+ A XMBC event client for the AppleTV, emulating the behaviour as experienced
+ under the AppleTV OS.

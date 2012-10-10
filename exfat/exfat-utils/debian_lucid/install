@@ -1,0 +1,4 @@
+dump/dumpexfat /sbin
+fsck/exfatfsck /sbin
+label/exfatlabel /sbin
+mkfs/mkexfatfs /sbin

@@ -1,0 +1,5 @@
+usr/include
+usr/lib/libnfs.a
+usr/lib/libnfs.la
+usr/lib/libnfs.so
+usr/lib/pkgconfig/libnfs.pc

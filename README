@@ -1,6 +1,7 @@
 Copyright (c) 2012 Bharath Ramesh <bramesh.dev@gmail.com>.
 
 Packaging files for xbmc-atv ppa.
+The ppa can be found at https://launchpad.net/~krosswindz/+archive/xbmc-atv
 
 Notes:
 Some of the packaging files are edited version of the original ubuntu packaging.
